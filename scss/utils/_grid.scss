@@ -1,0 +1,132 @@
+//
+//  ███████ ███████ ████████ ████████ ██ ███    ██  ██████  ███████
+//  ██      ██         ██       ██    ██ ████   ██ ██       ██
+//  ███████ █████      ██       ██    ██ ██ ██  ██ ██   ███ ███████
+//       ██ ██         ██       ██    ██ ██  ██ ██ ██    ██      ██
+//  ███████ ███████    ██       ██    ██ ██   ████  ██████  ███████
+//
+$width: calc(100%/12);
+$g1: calc($width * 1);
+$g2: calc($width * 2);
+$g3: calc($width * 3);
+$g4: calc($width * 4);
+$g5: calc($width * 5);
+$g6: calc($width * 6);
+$g7: calc($width * 7);
+$g8: calc($width * 8);
+$g9: calc($width * 9);
+$g10: calc($width * 10);
+$g11: calc($width * 11);
+$g12: calc($width * 12);
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: auto;
+}
+
+//
+//  ███████ ███████  ██████ ████████ ██  ██████  ███    ██
+//  ██      ██      ██         ██    ██ ██    ██ ████   ██
+//  ███████ █████   ██         ██    ██ ██    ██ ██ ██  ██
+//       ██ ██      ██         ██    ██ ██    ██ ██  ██ ██
+//  ███████ ███████  ██████    ██    ██  ██████  ██   ████
+//
+.section {
+  width: 100%;
+
+  &::after {
+    content: "";
+    clear: both;
+    width: 100%;
+    height: 0px;
+    display: block;
+  }
+
+  &.padding {
+    @include desktop {
+      padding: 5rem 0;
+    }
+
+    @include mobile {
+      padding: 2rem 0;
+    }
+  }
+
+  &.pad-top {
+    @include desktop {
+      padding-top: 5rem;
+    }
+
+    @include mobile {
+      padding-top: 2rem;
+    }
+  }
+
+  &.pad-bottom {
+    @include desktop {
+      padding-bottom: 5rem;
+    }
+
+    @include mobile {
+      padding-bottom: 2rem;
+    }
+  }
+
+//
+//  ██████   ██████  ██   ██
+//  ██   ██ ██    ██  ██ ██
+//  ██████  ██    ██   ███
+//  ██   ██ ██    ██  ██ ██
+//  ██████   ██████  ██   ██
+//
+  .box {
+  }
+
+//
+//  ██████   ██████  ██     ██
+//  ██   ██ ██    ██ ██     ██
+//  ██████  ██    ██ ██  █  ██
+//  ██   ██ ██    ██ ██ ███ ██
+//  ██   ██  ██████   ███ ███
+//
+  .row {
+  }
+
+//
+//   ██████  ██████  ██      ██    ██ ███    ███ ███    ██ ███████
+//  ██      ██    ██ ██      ██    ██ ████  ████ ████   ██ ██
+//  ██      ██    ██ ██      ██    ██ ██ ████ ██ ██ ██  ██ ███████
+//  ██      ██    ██ ██      ██    ██ ██  ██  ██ ██  ██ ██      ██
+//   ██████  ██████  ███████  ██████  ██      ██ ██   ████ ███████
+//
+  .cols {
+    box-sizing: border-box;
+
+    * { box-sizing: border-box; }
+  }
+
+//
+//  ████████ ██   ██ ███████      ██████  ██████  ██ ██████
+//     ██    ██   ██ ██          ██       ██   ██ ██ ██   ██
+//     ██    ███████ █████       ██   ███ ██████  ██ ██   ██
+//     ██    ██   ██ ██          ██    ██ ██   ██ ██ ██   ██
+//     ██    ██   ██ ███████      ██████  ██   ██ ██ ██████
+//
+  @include large-down {
+    .large-1 { width: $g1; }
+    .large-2 { width: $g2; }
+    .large-3 { width: $g3; }
+    .large-4 { width: $g4; }
+    .large-5 { width: $g5; }
+    .large-6 { width: $g6; }
+    .large-7 { width: $g7; }
+    .large-8 { width: $g8; }
+    .large-9 { width: $g9; }
+    .large-10 { width: $g10; }
+    .large-11 { width: $g11; }
+    .large-12 { width: $g12; }
+  }
+
+  @include medium-down
+}
