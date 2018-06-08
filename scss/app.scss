@@ -1,0 +1,27 @@
+@import 'utils/variables';
+@import 'utils/mediaqueries';
+@import 'utils/mixins';
+@import 'utils/grid';
+@import 'utils/type';
+@import 'styles';
+
+//
+// ███████ ███████ ████████ ████████ ██ ███    ██  ██████  ███████
+// ██      ██         ██       ██    ██ ████   ██ ██       ██
+// ███████ █████      ██       ██    ██ ██ ██  ██ ██   ███ ███████
+//      ██ ██         ██       ██    ██ ██  ██ ██ ██    ██      ██
+// ███████ ███████    ██       ██    ██ ██   ████  ██████  ███████
+//
+
+//
+// GRID SIZE:
+// SET MAX WIDTH OF THE "CONTENT CONTAINER" FOR THE PAGE, AND THE "BOX" INSIDE A SECTION PANEL
+//
+main[role="content"] {
+  //max-width: $large;
+  max-width: 100%;
+}
+
+.box {
+  max-width: $large;
+}

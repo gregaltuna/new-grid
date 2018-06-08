@@ -5,24 +5,42 @@
 //       ██ ██         ██       ██    ██ ██  ██ ██ ██    ██      ██
 //  ███████ ███████    ██       ██    ██ ██   ████  ██████  ███████
 //
-$width: calc(100%/12);
-$g1: calc($width * 1);
-$g2: calc($width * 2);
-$g3: calc($width * 3);
-$g4: calc($width * 4);
-$g5: calc($width * 5);
-$g6: calc($width * 6);
-$g7: calc($width * 7);
-$g8: calc($width * 8);
-$g9: calc($width * 9);
-$g10: calc($width * 10);
-$g11: calc($width * 11);
-$g12: calc($width * 12);
+// $width: calc(100% / 12);
+// $g1: calc((100% / 12) * 1);
+// $g2: calc((100% / 12) * 2);
+// $g3: calc((100% / 12) * 3);
+// $g4: calc((100% / 12) * 4);
+// $g5: calc((100% / 12) * 5);
+// $g6: calc((100% / 12) * 6);
+// $g7: calc((100% / 12) * 7);
+// $g8: calc((100% / 12) * 8);
+// $g9: calc((100% / 12) * 9);
+// $g10: calc((100% / 12) * 10);
+// $g11: calc((100% / 12) * 11);
+// $g12: calc((100% / 12) * 12);
+
+$width: (100% / 12);
+$g1: ($width * 1);
+$g2: ($width * 2);
+$g3: ($width * 3);
+$g4: ($width * 4);
+$g5: ($width * 5);
+$g6: ($width * 6);
+$g7: ($width * 7);
+$g8: ($width * 8);
+$g9: ($width * 9);
+$g10: ($width * 10);
+$g11: ($width * 11);
+$g12: ($width * 12);
 
 html, body {
 	margin: 0;
 	padding: 0;
 	height: auto;
+}
+
+main[role="content"] {
+  margin: 0 auto;
 }
 
 //
@@ -43,33 +61,136 @@ html, body {
     display: block;
   }
 
-  &.padding {
+	&.pad {
+		$pad: 3rem;
     @include desktop {
-      padding: 5rem 0;
+      padding: $pad 0;
     }
 
     @include mobile {
-      padding: 2rem 0;
+      padding: ($pad / 2) 0;
     }
   }
 
-  &.pad-top {
+	&.pad-small {
+		$pad: 1rem;
     @include desktop {
-      padding-top: 5rem;
+      padding: $pad 0;
     }
 
     @include mobile {
-      padding-top: 2rem;
+      padding: ($pad / 2) 0;
     }
   }
 
-  &.pad-bottom {
+	&.pad-big {
+		$pad: 5rem;
     @include desktop {
-      padding-bottom: 5rem;
+      padding: $pad 0;
     }
 
     @include mobile {
-      padding-bottom: 2rem;
+      padding: ($pad / 2) 0;
+    }
+  }
+
+	&.pad-huge{
+		$pad: 7rem;
+    @include desktop {
+      padding: $pad 0;
+    }
+
+    @include mobile {
+      padding: ($pad / 2) 0;
+    }
+  }
+
+	&.pad-top {
+		$pad: 3rem;
+    @include desktop {
+      padding-top: $pad;
+    }
+
+    @include mobile {
+      padding-top: ($pad / 2);
+    }
+  }
+
+	&.pad-top-small {
+		$pad: 1rem;
+    @include desktop {
+      padding-top: $pad;
+    }
+
+    @include mobile {
+      padding-top: ($pad / 2);
+    }
+  }
+
+	&.pad-top-big {
+		$pad: 5rem;
+    @include desktop {
+      padding-top: $pad;
+    }
+
+    @include mobile {
+      padding-top: ($pad / 2);
+    }
+  }
+
+	&.pad-top-huge {
+		$pad: 7rem;
+
+    @include desktop {
+      padding-top: $pad;
+    }
+
+    @include mobile {
+			padding-top: ($pad / 2);
+    }
+  }
+
+	&.pad-bot {
+		$pad: 3rem;
+    @include desktop {
+      padding-bottom: $pad;
+    }
+
+    @include mobile {
+      padding-bottom: ($pad / 2);
+    }
+  }
+
+	&.pad-bot-small {
+		$pad: 1rem;
+    @include desktop {
+      padding-bottom: $pad;
+    }
+
+    @include mobile {
+      padding-bottom: ($pad / 2);
+    }
+  }
+
+	&.pad-bot-big {
+		$pad: 5rem;
+    @include desktop {
+      padding-bottom: $pad;
+    }
+
+    @include mobile {
+      padding-bottom: ($pad / 2);
+    }
+  }
+
+	&.pad-bot-huge {
+		$pad: 7rem;
+    @include desktop {
+      padding-bottom: $pad;
+    }
+
+    @include mobile {
+      padding-bottom: ($pad / 2);
     }
   }
 
@@ -81,6 +202,37 @@ html, body {
 //  ██████   ██████  ██   ██
 //
   .box {
+		margin: 0 auto;
+		@include transition(0.420s); // BLUES
+
+		@include xsmall {
+			//width: 360px;
+		}
+
+		@include small {
+			width: 600px;
+		}
+
+		@include medium {
+			width: 900px;
+		}
+
+		@include large {
+			width: 1200px;
+		}
+
+		@include xlarge {
+			width: 1600px;
+		}
+
+		@include xxlarge {
+			width: 1800px;
+		}
+
+		&.wide {
+			width: 100%;
+			max-width: 100%;
+		}
   }
 
 //
@@ -91,6 +243,18 @@ html, body {
 //  ██   ██  ██████   ███ ███
 //
   .row {
+		width: 100%;
+		max-width: 100%;
+		display: inline-block;
+		//box-sizing: border-box;
+
+		@include desktop {
+			//margin: 0 -0.9375rem;
+		}
+
+		@include mobile {
+			// margin: 0 -0.46875rem;
+		}
   }
 
 //
@@ -100,11 +264,44 @@ html, body {
 //  ██      ██    ██ ██      ██    ██ ██  ██  ██ ██  ██ ██      ██
 //   ██████  ██████  ███████  ██████  ██      ██ ██   ████ ███████
 //
-  .cols {
+  .col {
+		float: left;
+		display: inline-block;
     box-sizing: border-box;
+		//padding: 0 0.9375rem; // FOUNDATION BASE
+		padding: 0 0.85rem;
 
-    * { box-sizing: border-box; }
+		&.tint {
+			background: rgba(#000,.15);
+		}
+
+		&.parent {
+			padding: 0;
+		}
+
+		&.mobile {
+			@include mobile {
+				display: inline-block;
+			}
+
+			@include desktop {
+				display: none;
+			}
+		}
+
+		&.desktop {
+			@include mobile {
+				display: none;
+			}
+
+			@include desktop {
+				display: inline-block;
+			}
+		}
+
+    //* { box-sizing: border-box; }
   }
+}
 
 //
 //  ████████ ██   ██ ███████      ██████  ██████  ██ ██████
@@ -113,20 +310,121 @@ html, body {
 //     ██    ██   ██ ██          ██    ██ ██   ██ ██ ██   ██
 //     ██    ██   ██ ███████      ██████  ██   ██ ██ ██████
 //
-  @include large-down {
-    .large-1 { width: $g1; }
-    .large-2 { width: $g2; }
-    .large-3 { width: $g3; }
-    .large-4 { width: $g4; }
-    .large-5 { width: $g5; }
-    .large-6 { width: $g6; }
-    .large-7 { width: $g7; }
-    .large-8 { width: $g8; }
-    .large-9 { width: $g9; }
-    .large-10 { width: $g10; }
-    .large-11 { width: $g11; }
-    .large-12 { width: $g12; }
-  }
 
-  @include medium-down
+.g-1 { width: $g1; }
+.g-2 { width: $g2; }
+.g-3 { width: $g3; }
+.g-4 { width: $g4; }
+.g-5 { width: $g5; }
+.g-6 { width: $g6; }
+.g-7 { width: $g7; }
+.g-8 { width: $g8; }
+.g-9 { width: $g9; }
+.g-10 { width: $g10; }
+.g-11 { width: $g11; }
+.g-12 { width: $g12; }
+
+@include mobile {
+  .gm-1 { width: $g1; }
+  .gm-2 { width: $g2; }
+  .gm-3 { width: $g3; }
+  .gm-4 { width: $g4; }
+  .gm-5 { width: $g5; }
+  .gm-6 { width: $g6; }
+  .gm-7 { width: $g7; }
+  .gm-8 { width: $g8; }
+  .gm-9 { width: $g9; }
+  .gm-10 { width: $g10; }
+  .gm-11 { width: $g11; }
+  .gm-12 { width: $g12; }
+}
+
+@include desktop {
+  .gd-1 { width: $g1; }
+  .gd-2 { width: $g2; }
+  .gd-3 { width: $g3; }
+  .gd-4 { width: $g4; }
+  .gd-5 { width: $g5; }
+  .gd-6 { width: $g6; }
+  .gd-7 { width: $g7; }
+  .gd-8 { width: $g8; }
+  .gd-9 { width: $g9; }
+  .gd-10 { width: $g10; }
+  .gd-11 { width: $g11; }
+  .gd-12 { width: $g12; }
+}
+
+@include xsmall {
+  .gxs-1 { width: $g1; }
+  .gxs-2 { width: $g2; }
+  .gxs-3 { width: $g3; }
+  .gxs-4 { width: $g4; }
+  .gxs-5 { width: $g5; }
+  .gxs-6 { width: $g6; }
+  .gxs-7 { width: $g7; }
+  .gxs-8 { width: $g8; }
+  .gxs-9 { width: $g9; }
+  .gxs-10 { width: $g10; }
+  .gxs-11 { width: $g11; }
+  .gxs-12 { width: $g12; }
+}
+
+@include small {
+  .gs-1 { width: $g1; }
+  .gs-2 { width: $g2; }
+  .gs-3 { width: $g3; }
+  .gs-4 { width: $g4; }
+  .gs-5 { width: $g5; }
+  .gs-6 { width: $g6; }
+  .gs-7 { width: $g7; }
+  .gs-8 { width: $g8; }
+  .gs-9 { width: $g9; }
+  .gs-10 { width: $g10; }
+  .gs-11 { width: $g11; }
+  .gs-12 { width: $g12; }
+}
+
+@include medium {
+  .gm-1 { width: $g1; }
+  .gm-2 { width: $g2; }
+  .gm-3 { width: $g3; }
+  .gm-4 { width: $g4; }
+  .gm-5 { width: $g5; }
+  .gm-6 { width: $g6; }
+  .gm-7 { width: $g7; }
+  .gm-8 { width: $g8; }
+  .gm-9 { width: $g9; }
+  .gm-10 { width: $g10; }
+  .gm-11 { width: $g11; }
+  .gm-12 { width: $g12; }
+}
+
+@include large {
+  .gl-1 { width: $g1; }
+  .gl-2 { width: $g2; }
+  .gl-3 { width: $g3; }
+  .gl-4 { width: $g4; }
+  .gl-5 { width: $g5; }
+  .gl-6 { width: $g6; }
+  .gl-7 { width: $g7; }
+  .gl-8 { width: $g8; }
+  .gl-9 { width: $g9; }
+  .gl-10 { width: $g10; }
+  .gl-11 { width: $g11; }
+  .gl-12 { width: $g12; }
+}
+
+@include xlarge {
+  .gxl-1 { width: $g1; }
+  .gxl-2 { width: $g2; }
+  .gxl-3 { width: $g3; }
+  .gxl-4 { width: $g4; }
+  .gxl-5 { width: $g5; }
+  .gxl-6 { width: $g6; }
+  .gxl-7 { width: $g7; }
+  .gxl-8 { width: $g8; }
+  .gxl-9 { width: $g9; }
+  .gxl-10 { width: $g10; }
+  .gxl-11 { width: $g11; }
+  .gxl-12 { width: $g12; }
 }

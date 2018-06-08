@@ -7,8 +7,42 @@
 		"uuidString": "CBAB235B-0119-4B58-96BF-D054B394E14E"
 		}
 	],
-"creatorBuild": "26148",
+"creatorBuild": "26680",
 "files": {
+	"\/css\/app.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/app-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/app.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/css\/app.css.map",
+		"oF": 0
+		},
+	"\/css\/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/index.htm": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/index.htm",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -27,6 +61,19 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/scss\/app.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/css\/app.css",
+		"oF": 2,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/scss\/styles.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -34,7 +81,7 @@
 		"dS": 0,
 		"ft": 4,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/css\/styles.css",
 		"oF": 2,
 		"oS": 0,
@@ -114,7 +161,8 @@
 	"creationDate": 533443750,
 	"displayValue": "new-grid",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-leo"
+	"iconImageName": "meme-leo",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -122,6 +170,7 @@
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoprefixerEnableIEGrid": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
 	"babelConfigFileHandlingType": 0,
@@ -685,6 +734,10 @@
 		"id-match": {
 			"active": 0,
 			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"implicit-arrow-linebreak": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"indent": {
 			"active": 0,
@@ -1912,6 +1965,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

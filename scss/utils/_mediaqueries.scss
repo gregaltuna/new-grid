@@ -15,14 +15,6 @@ $mgutter:	5px;
 //  ██   ██ ██   ██ ██      ██   ██ ██  ██  ██      ██    ██ ██ ██  ██ ██    ██         ██
 //  ██████  ██   ██ ███████ ██   ██ ██   ██ ██       ██████  ██ ██   ████    ██    ███████
 //
-
-// $small:		770px;  LEGACY
-// $medium:	980px;  LEGACY
-// $large:		1200px  LEGACY;
-// $xlarge:	1600px  LEGACY;
-//
-//  THE NEW ONES
-//
 $xsmall:	360px;
 $small:		600px;
 $medium:	900px;
@@ -68,6 +60,12 @@ $xxlarge: 1800px;
 }
 
 @mixin small {
+  @media only screen and (min-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin small-only {
   @media only screen and (min-width: #{$small}) and (max-width: #{$medium - 1}) {
     @content;
   }
@@ -79,13 +77,13 @@ $xxlarge: 1800px;
   }
 }
 
-@mixin small-up {
-  @media only screen and (min-width: #{$small}) {
+@mixin medium {
+  @media only screen and (min-width: #{$medium}) {
     @content;
   }
 }
 
-@mixin medium {
+@mixin medium-only {
   @media only screen and (min-width: #{$medium}) and (max-width: #{$large - 1}) {
     @content;
   }
@@ -93,12 +91,6 @@ $xxlarge: 1800px;
 
 @mixin medium-down {
   @media only screen and (max-width: #{$large - 1}) {
-    @content;
-  }
-}
-
-@mixin medium-up {
-  @media only screen and (min-width: #{$medium}) {
     @content;
   }
 }
@@ -123,6 +115,12 @@ $xxlarge: 1800px;
 }
 
 @mixin xlarge {
+	@media only screen and (min-width: #{$xlarge}) {
+		@content;
+	}
+}
+
+@mixin xlarge-only {
   // UNCOMMENT IF USING X-LARGE BREAKPOINT: @media only screen and (min-width: #{$large}) and (max-width: #{$xlarge - 1}) {
   @media only screen and (min-width: #{$large}) and (max-width: #{$xlarge -1}) {
     @content;
@@ -135,14 +133,29 @@ $xxlarge: 1800px;
   }
 }
 
-@mixin xlarge-up {
-	@media only screen and (min-width: #{$xlarge}) {
-		@content;
-	}
-}
 
 @mixin xxlarge {
 	@media only screen and (min-width: #{$xxlarge}) {
 		@content;
+	}
+}
+
+@include mobile {
+	.mobile {
+		display: inherit;
+	}
+
+	.desktop {
+		display: none;
+	}
+}
+
+@include desktop {
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		display: inherit;
 	}
 }

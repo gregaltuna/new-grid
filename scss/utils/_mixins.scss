@@ -1,21 +1,24 @@
-////////////////
-//  PREFIXES  //
-////////////////
-
-// THIS PREFIX MIXIN THINGY from ANDY.SCSS
+//
+//  ██████  ██████  ███████ ███████ ██ ██   ██ ███████ ███████
+//  ██   ██ ██   ██ ██      ██      ██  ██ ██  ██      ██
+//  ██████  ██████  █████   █████   ██   ███   █████   ███████
+//  ██      ██   ██ ██      ██      ██  ██ ██  ██           ██
+//  ██      ██   ██ ███████ ██      ██ ██   ██ ███████ ███████
+//
+// THIS PREFIX MIXING THINGY from ANDY.SCSS
 // Mixin helper to output vendor-prefixed CSS
 // @access private
 // @author HugoGiraudel
 // @param {String} $property - Unprefixed CSS property
 // @param {*} $value - Raw CSS value
 // @param {List} $prefixes [()] - List of prefixes to output
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    -#{$prefix}-#{$property}: $value;
-  }
-
-  #{$property}: $value;
-}
+// @mixin prefix($property, $value, $prefixes: ()) {
+//   @each $prefix in $prefixes {
+//     -#{$prefix}-#{$property}: $value;
+//   }
+//
+//   #{$property}: $value;
+// }
 
 // Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
 // By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
@@ -23,33 +26,30 @@
 // @param {*} $property Property
 // @param {*} $value Value
 
-@mixin css3-prefix($property, $value) {
-  -webkit-#{$property}: #{$value};
-   -khtml-#{$property}: #{$value};
-     -moz-#{$property}: #{$value};
-      -ms-#{$property}: #{$value};
-       -o-#{$property}: #{$value};
-          #{$property}: #{$value};
-}
+// @mixin css3-prefix($property, $value) {
+//   -webkit-#{$property}: #{$value};
+//    -khtml-#{$property}: #{$value};
+//      -moz-#{$property}: #{$value};
+//       -ms-#{$property}: #{$value};
+//        -o-#{$property}: #{$value};
+//           #{$property}: #{$value};
+// }
 
 @mixin prefixes($property, $value) {
   -webkit-#{$property}: #{$value};
-   -khtml-#{$property}: #{$value};
+//   -khtml-#{$property}: #{$value};
      -moz-#{$property}: #{$value};
       -ms-#{$property}: #{$value};
        -o-#{$property}: #{$value};
           #{$property}: #{$value};
 }
 
-@mixin transform($arguments) {
-  -webkit-transform: $arguments;
-      -ms-transform: $arguments; // IE9
-          transform: $arguments;
-}
-
-///////////////////////////
-//  TYPOGRAPHY & COLORS  //
-///////////////////////////
+//
+//  ████████ ██    ██ ██████  ███████
+//     ██     ██  ██  ██   ██ ██
+//     ██      ████   ██████  █████
+//     ██       ██    ██      ██
+//     ██       ██    ██      ███████
 //
 //  EM/REM FALLBACK appended with EMs: http://zerosixthree.se/
 //
@@ -65,51 +65,51 @@
 
 @mixin font-size($size) {
   font-size: $size;
-  font-size: calculateEm($size);
+  //font-size: calculateEm($size);
   font-size: calculateRem($size);
-}
-
-@function remCalc($size) {
-	$remSize: $size / $base-font;
-	@return #{$remSize}rem;
 }
 
 @mixin line-height($size) {
   line-height: $size;
-  line-height: calculateEm($size);
+  //line-height: calculateEm($size);
   line-height: calculateRem($size);
 }
 
-//
-//  TEXT SHADOW
-//
 @mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
-	text-shadow: $x $y $blur $color;
+	//text-shadow: $x $y $blur $color;
+  @include prefixes(text-shadow, $x $y $blur $color);
+
 }
 
 //
-//  COLORS with TRANSPARENCY
+//   ██████  ██████  ██       ██████  ██████  ███████
+//  ██      ██    ██ ██      ██    ██ ██   ██ ██
+//  ██      ██    ██ ██      ██    ██ ██████  ███████
+//  ██      ██    ██ ██      ██    ██ ██   ██      ██
+//   ██████  ██████  ███████  ██████  ██   ██ ███████
 //
-@mixin transBg ($color, $opacity) {
-	background-color: $color;
-	background-color: rgba($color, $opacity);
-}
+// @mixin transBg ($color, $opacity) {
+// 	background-color: $color;
+// 	background-color: rgba($color, $opacity);
+// }
+//
+// @mixin transColor ($color, $opacity) {
+// 	color: $color;
+// 	//-moz-opacity: $opacity;
+// 	color: rgba($color, $opacity);
+// }
+//
+// @mixin transBorder ($color, $opacity) {
+// 	border-color: $color;
+// 	border-color: rgba($color, $opacity);
+// }
 
-@mixin transColor ($color, $opacity) {
-	color: $color;
-	//-moz-opacity: $opacity;
-	color: rgba($color, $opacity);
-}
-
-@mixin transBorder ($color, $opacity) {
-	border-color: $color;
-	border-color: rgba($color, $opacity);
-}
-
-
-/////////////////
-//  CENTERING  //
-/////////////////
+//
+//   ██████ ███████ ███    ██ ████████ ███████ ██████  ██ ███    ██  ██████
+//  ██      ██      ████   ██    ██    ██      ██   ██ ██ ████   ██ ██
+//  ██      █████   ██ ██  ██    ██    █████   ██████  ██ ██ ██  ██ ██   ███
+//  ██      ██      ██  ██ ██    ██    ██      ██   ██ ██ ██  ██ ██ ██    ██
+//   ██████ ███████ ██   ████    ██    ███████ ██   ██ ██ ██   ████  ██████
 //
 //  VERTICALLY AND HORIZONTALLY CENTER A RELATIVE POSITIONED ELEMENT
 //
@@ -122,6 +122,25 @@
   margin: 0 auto;
 }
 
+@mixin centerVert {
+	height: auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+  position: relative;
+}
+
+@mixin centerHorz {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+  position: relative;
+}
+
+//
+//  ABSOLUTE CENTERING
 //
 //  EXAMPLE @include center($xy:y); for vertical, absolute
 //
@@ -132,57 +151,43 @@
     bottom: auto;
     right: auto;
     @include transform(translateX(-50%) translateY(-50%));
+    position: absolute;
   }
   @else if $xy == x {
     left: 50%;
     right: auto;
     @include transform(translateX(-50%));
+    position: absolute;
   }
   @else if $xy == y {
     top: 50%;
     bottom: auto;
     @include transform(translateY(-50%));
+    position: absolute;
   }
 }
 
-@mixin center-both {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	@include prefixes(transform, translate(-50%, -50%));
-}
+// @mixin center-both {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	@include prefixes(transform, translate(-50%, -50%));
+// }
 
-@mixin centerer($horizontal: true, $vertical: true) {
-  position: absolute;
-  @if ($horizontal and $vertical) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } @else if ($horizontal) {
-    left: 50%;
-    transform: translate(-50%, 0);
-  } @else if ($vertical) {
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-}
-
-@mixin centerVert {
-	height: auto;
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-@mixin centerHorz {
-	position: relative;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-}
+// @mixin centerer($horizontal: true, $vertical: true) {
+//   position: absolute;
+//   @if ($horizontal and $vertical) {
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   } @else if ($horizontal) {
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//   } @else if ($vertical) {
+//     top: 50%;
+//     transform: translate(0, -50%);
+//   }
+// }
 
 @mixin centerCancel {
 	top: inherit !important;
@@ -193,10 +198,12 @@
   @include prefixes(transform, none !important);
 }
 
-
-///////////////////////////////////
-//  BOXES AND CIRCLES AND STUFF  //
-///////////////////////////////////
+//
+//  ███████ ██   ██  █████  ██████  ███████ ███████
+//  ██      ██   ██ ██   ██ ██   ██ ██      ██
+//  ███████ ███████ ███████ ██████  █████   ███████
+//       ██ ██   ██ ██   ██ ██      ██           ██
+//  ███████ ██   ██ ██   ██ ██      ███████ ███████
 //
 // CLEARFIX
 // sass:
@@ -216,7 +223,108 @@
 }
 
 //
-//  BORDER RADIUS
+//  CIRCLE from Levenson
+//
+@mixin circle($size, $color, $display) {
+	display: $display;
+	line-height: $size;
+	width: $size;
+	height: $size;
+	background: $color;
+	@include prefixes(border-radius, $size/2);
+}
+
+//
+//  MULTIPLE BORDERS CIRCLE from Levenson (never really got it to work)
+//
+@mixin circles($border: 10px, $outer: red, $middle: blue, $innermost: green) {
+	//
+  //  OUTER CIRCLE
+  //
+  border: $border solid transparent;
+  border-top-color: $outer;
+  @include prefixes(border-radius, 50%);
+  @include animation(spin 1.8s linear infinite);
+
+	//
+  //  MIDDLE CIRCLE
+  //
+  &:before {
+    content: "";
+    position: absolute;
+    top: $border;
+    left: $border;
+    right: $border;
+    bottom: $border;
+    border: $border solid transparent;
+    border-top-color: $middle;
+		@include prefixes(border-radius, 50%);
+    @include animation(reverse-spin 1.4s linear infinite);
+  }
+
+	//
+  //  INNERMOST CIRCLE
+  //
+  &:after {
+    content: "";
+    position: absolute;
+    top: $border * 3;
+    left: $border * 3;
+    right: $border * 3;
+    bottom: $border * 3;
+    border: $border solid transparent;
+    border-top-color: $innermost;
+		@include prefixes(border-radius, 50%);
+    @include animation(spin 1.8s linear infinite);
+  }
+}
+
+// @mixin size($width, $height: $width) {
+// 	width: $width;
+// 	height: $height;
+// }
+
+// @mixin square($size) {
+// 	width: $size;
+// 	height: $size;
+// 	display: block;
+// 	overflow: inherit;
+// }
+
+// @mixin box-shadow ($param) {
+// 	@include prefixes(box-shadow, $param);
+// }
+
+//
+//  BACKGROUND-CLIP
+//
+@mixin bg-clip ($b) {
+@if $b == border-box {
+	-webkit-background-clip: border;  /* Safari 4? Chrome 6? */
+		 -moz-background-clip: border;	/* Firefox 3.6 */
+	@include prefixes(background-clip, $b, 'ms' 'o');
+}
+
+@else if $b == padding-box {
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+     -moz-background-clip: padding;     /* Firefox 3.6 */
+  	    background-clip: $b;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+	@include prefixes(background-clip, $b, 'ms' 'o');
+}
+
+@else if $b == content-box {
+	-webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+		-moz-background-clip: content;     /* Firefox 3.6 */
+	@include prefixes(background-clip, $b, 'ms' 'o');
+	}
+}
+
+//
+//  ██████   ██████  ██████  ██████  ███████ ██████  ███████
+//  ██   ██ ██    ██ ██   ██ ██   ██ ██      ██   ██ ██
+//  ██████  ██    ██ ██████  ██   ██ █████   ██████  ███████
+//  ██   ██ ██    ██ ██   ██ ██   ██ ██      ██   ██      ██
+//  ██████   ██████  ██   ██ ██████  ███████ ██   ██ ███████
 //
 @mixin border-radius($radius:.25em) {
   @include prefixes(border-radius, $radius);
@@ -274,7 +382,7 @@
     background-position: 0 0, 0 100%;
     background-size: 100% $border-width;
   }
-  
+
   @if $direction == 'to top' or $direction == 'to bottom' {
     @if $direction == 'to top' {
       border-top: $border-width solid $color2;
@@ -289,107 +397,18 @@
 }
 
 //
-//  CIRCLE from Levenson
+// ██████   █████   ██████ ██   ██  ██████  ██████   ██████  ██    ██ ███    ██ ██████  ███████
+// ██   ██ ██   ██ ██      ██  ██  ██       ██   ██ ██    ██ ██    ██ ████   ██ ██   ██ ██
+// ██████  ███████ ██      █████   ██   ███ ██████  ██    ██ ██    ██ ██ ██  ██ ██   ██ ███████
+// ██   ██ ██   ██ ██      ██  ██  ██    ██ ██   ██ ██    ██ ██    ██ ██  ██ ██ ██   ██      ██
+// ██████  ██   ██  ██████ ██   ██  ██████  ██   ██  ██████   ██████  ██   ████ ██████  ███████
 //
-@mixin circle($size, $color, $display) {
-	display: $display;
-	line-height: $size;
-	width: $size;
-	height: $size;
-	background-color: $color;
-	@include prefixes(border-radius, $size/2);
-}
-
-//
-//  MULTIPLE BORDERS CIRCLE from Levenson (never really got it to work)
-//
-@mixin circles($border: 10px, $outer: red, $middle: blue, $innermost: green) {
-	//
-  //  OUTER CIRCLE
-  //
-  border: $border solid transparent;
-  border-top-color: $outer;
-  @include prefixes(border-radius, 50%);
-  @include animation(spin 1.8s linear infinite);
-
-	//
-  //  MIDDLE CIRCLE
-  //
-  &:before {
-    content: "";
-    position: absolute;
-    top: $border;
-    left: $border;
-    right: $border;
-    bottom: $border;
-    border: $border solid transparent;
-    border-top-color: $middle;
-		@include prefixes(border-radius, 50%);
-    @include animation(reverse-spin 1.4s linear infinite);
-  }
-
-	//
-  //  INNERMOST CIRCLE
-  //
-  &:after {
-    content: "";
-    position: absolute;
-    top: $border * 3;
-    left: $border * 3;
-    right: $border * 3;
-    bottom: $border * 3;
-    border: $border solid transparent;
-    border-top-color: $innermost;
-		@include prefixes(border-radius, 50%);
-    @include animation(spin 1.8s linear infinite);
-  }
-}
-
-@mixin size($width, $height: $width) {
-	width: $width;
-	height: $height;
-}
-
-@mixin square($size) {
-	width: $size;
-	height: $size;
-	display: block;
-	overflow: inherit;
-}
-
-// @mixin box-shadow ($param) {
-// 	@include prefixes(box-shadow, $param);
-// }
-
-//
-//  BACKGROUND-CLIP
-//
-@mixin bg-clip ($b) {
-@if $b == border-box {
-	-webkit-background-clip: border;  /* Safari 4? Chrome 6? */
-		 -moz-background-clip: border;	/* Firefox 3.6 */
-	@include prefix(background-clip, $b, 'ms' 'o');
-}
-
-@else if $b == padding-box {
-  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
-     -moz-background-clip: padding;     /* Firefox 3.6 */
-  	    background-clip: $b;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
-	@include prefix(background-clip, $b, 'ms' 'o');
-}
-
-@else if $b == content-box {
-	-webkit-background-clip: content;  /* Safari 4? Chrome 6? */
-		-moz-background-clip: content;     /* Firefox 3.6 */
-	@include prefix(background-clip, $b, 'ms' 'o');
-	}
-}
 
 // Background Vertical Gradient
 // @param {Color} $startColor [#3C3C3C] - Start Color
 // @param {Color} $endColor [#999999] - End Color
 
-@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+@mixin background-gradient-v($startColor: #3C3C3C, $endColor: #999999) {
 	background-color: $startColor;
 	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
 	background-image: -webkit-linear-gradient(top, $startColor, $endColor);
@@ -404,7 +423,7 @@
 // @param {Color} $startColor [#3C3C3C] - Start Color
 // @param {Color} $endColor [#999999] - End Color
 
-@mixin background-horizontal($startColor: #3C3C3C, $endColor: #999999) {
+@mixin background-horizontal-h($startColor: #3C3C3C, $endColor: #999999) {
 	background-color: $startColor;
 	background-image: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
 	background-image: -webkit-linear-gradient(left, $startColor, $endColor);
@@ -452,6 +471,14 @@
   background: rgba($color, $opacity);
 }
 
+//
+// ██████   █████  ███    ██ ██████   ██████  ███████
+// ██   ██ ██   ██ ████   ██ ██   ██ ██    ██ ██
+// ██████  ███████ ██ ██  ██ ██   ██ ██    ██ ███████
+// ██   ██ ██   ██ ██  ██ ██ ██   ██ ██    ██      ██
+// ██   ██ ██   ██ ██   ████ ██████   ██████  ███████
+//
+
 //////////////////////
 //  RAMDOM USEFULS  //
 //////////////////////
@@ -462,11 +489,21 @@
 //			@include transition(color .3s ease);
 //				&:hover {
 //					color: black;
-//				}	
-//		}	
+//				}
+//		}
 //
 @mixin transition($args...) {
   @include prefixes(transition, $args);
+}
+
+@mixin transform($arguments) {
+//   -webkit-transform: $arguments;
+//    -khtml-transform: $arguments;
+//      -moz-transform: $arguments;
+//       -ms-transform: $arguments; // IE9, JUST IN CASE
+//        -o-transform: $arguments;
+//           transform: $arguments;
+  @include prefixes(transform, $arguments);
 }
 
 // CROSS-BROWSER OPACITY
@@ -518,14 +555,5 @@
 	outline-size: $width;
 	outline-style: solid;
 	outline-color: rgba($color,$opacity);
-	outline-offset: -$width; 
+	outline-offset: -$width;
 };
-
-//  ROTATE
-@mixin rotate($degrees) {
-//	-ms-transform: rotate(180deg); /* IE 9 */
-//	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-//	transform: rotate(180deg);
-//	
-	//@include prefixes(transform(rotate(#{$degrees}!deg)));
-}

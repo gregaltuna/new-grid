@@ -16,10 +16,10 @@ html, body {
     height: 0px;
     display: block; }
   @media only screen and (min-width: 600px) {
-    .section.padding {
+    .section.pad {
       padding: 5rem 0; } }
   @media only screen and (max-width: 599px) {
-    .section.padding {
+    .section.pad {
       padding: 2rem 0; } }
   @media only screen and (min-width: 600px) {
     .section.pad-top {
@@ -28,40 +28,266 @@ html, body {
     .section.pad-top {
       padding-top: 2rem; } }
   @media only screen and (min-width: 600px) {
-    .section.pad-bottom {
+    .section.pad-bot {
       padding-bottom: 5rem; } }
   @media only screen and (max-width: 599px) {
-    .section.pad-bottom {
+    .section.pad-bot {
       padding-bottom: 2rem; } }
-  .section .cols {
-    box-sizing: border-box; }
-    .section .cols * {
+  .section .box {
+    margin: 0 auto;
+    max-width: 1200px; }
+    @media only screen and (max-width: 360px) {
+      .section .box {
+        width: 360px; } }
+    @media only screen and (min-width: 600px) {
+      .section .box {
+        width: 600px; } }
+    @media only screen and (min-width: 900px) {
+      .section .box {
+        width: 900px; } }
+    @media only screen and (min-width: 1200px) {
+      .section .box {
+        width: 1200px; } }
+    @media only screen and (min-width: 1600px) {
+      .section .box {
+        width: 1600px; } }
+    @media only screen and (min-width: 1800px) {
+      .section .box {
+        width: 1800px; } }
+  @media only screen and (min-width: 600px) {
+    .section .row {
+      margin: 0 -0.9375rem; } }
+  @media only screen and (max-width: 599px) {
+    .section .row {
+      margin: 0 -0.46875rem; } }
+  .section .col {
+    float: left;
+    display: inline-block;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0 0.9375rem; }
+    .section .col.parent {
+      padding: 0; }
+    .section .col * {
       box-sizing: border-box; }
-  @media only screen and (max-width: 1599px) {
-    .section .large-1 {
-      width: calc($width * 1); }
-    .section .large-2 {
-      width: calc($width * 2); }
-    .section .large-3 {
-      width: calc($width * 3); }
-    .section .large-4 {
-      width: calc($width * 4); }
-    .section .large-5 {
-      width: calc($width * 5); }
-    .section .large-6 {
-      width: calc($width * 6); }
-    .section .large-7 {
-      width: calc($width * 7); }
-    .section .large-8 {
-      width: calc($width * 8); }
-    .section .large-9 {
-      width: calc($width * 9); }
-    .section .large-10 {
-      width: calc($width * 10); }
-    .section .large-11 {
-      width: calc($width * 11); }
-    .section .large-12 {
-      width: calc($width * 12); } }
+
+.g-1 {
+  width: calc((100% / 12) * 1); }
+
+.g-2 {
+  width: calc((100% / 12) * 2); }
+
+.g-3 {
+  width: calc((100% / 12) * 3); }
+
+.g-4 {
+  width: calc((100% / 12) * 4); }
+
+.g-5 {
+  width: calc((100% / 12) * 5); }
+
+.g-6 {
+  width: calc((100% / 12) * 6); }
+
+.g-7 {
+  width: calc((100% / 12) * 7); }
+
+.g-8 {
+  width: calc((100% / 12) * 8); }
+
+.g-9 {
+  width: calc((100% / 12) * 9); }
+
+.g-10 {
+  width: calc((100% / 12) * 10); }
+
+.g-11 {
+  width: calc((100% / 12) * 11); }
+
+.g-12 {
+  width: calc((100% / 12) * 12); }
+
+@media only screen and (min-width: 600px) {
+  .gd-1 {
+    width: calc((100% / 12) * 1); }
+  .gd-2 {
+    width: calc((100% / 12) * 2); }
+  .gd-3 {
+    width: calc((100% / 12) * 3); }
+  .gd-4 {
+    width: calc((100% / 12) * 4); }
+  .gd-5 {
+    width: calc((100% / 12) * 5); }
+  .gd-6 {
+    width: calc((100% / 12) * 6); }
+  .gd-7 {
+    width: calc((100% / 12) * 7); }
+  .gd-8 {
+    width: calc((100% / 12) * 8); }
+  .gd-9 {
+    width: calc((100% / 12) * 9); }
+  .gd-10 {
+    width: calc((100% / 12) * 10); }
+  .gd-11 {
+    width: calc((100% / 12) * 11); }
+  .gd-12 {
+    width: calc((100% / 12) * 12); } }
+
+@media only screen and (max-width: 360px) {
+  .gxs-1 {
+    width: calc((100% / 12) * 1); }
+  .gxs-2 {
+    width: calc((100% / 12) * 2); }
+  .gxs-3 {
+    width: calc((100% / 12) * 3); }
+  .gxs-4 {
+    width: calc((100% / 12) * 4); }
+  .gxs-5 {
+    width: calc((100% / 12) * 5); }
+  .gxs-6 {
+    width: calc((100% / 12) * 6); }
+  .gxs-7 {
+    width: calc((100% / 12) * 7); }
+  .gxs-8 {
+    width: calc((100% / 12) * 8); }
+  .gxs-9 {
+    width: calc((100% / 12) * 9); }
+  .gxs-10 {
+    width: calc((100% / 12) * 10); }
+  .gxs-11 {
+    width: calc((100% / 12) * 11); }
+  .gxs-12 {
+    width: calc((100% / 12) * 12); } }
+
+@media only screen and (min-width: 600px) {
+  .gs-1 {
+    width: calc((100% / 12) * 1); }
+  .gs-2 {
+    width: calc((100% / 12) * 2); }
+  .gs-3 {
+    width: calc((100% / 12) * 3); }
+  .gs-4 {
+    width: calc((100% / 12) * 4); }
+  .gs-5 {
+    width: calc((100% / 12) * 5); }
+  .gs-6 {
+    width: calc((100% / 12) * 6); }
+  .gs-7 {
+    width: calc((100% / 12) * 7); }
+  .gs-8 {
+    width: calc((100% / 12) * 8); }
+  .gs-9 {
+    width: calc((100% / 12) * 9); }
+  .gs-10 {
+    width: calc((100% / 12) * 10); }
+  .gs-11 {
+    width: calc((100% / 12) * 11); }
+  .gs-12 {
+    width: calc((100% / 12) * 12); } }
+
+@media only screen and (min-width: 900px) {
+  .gm-1 {
+    width: calc((100% / 12) * 1); }
+  .gm-2 {
+    width: calc((100% / 12) * 2); }
+  .gm-3 {
+    width: calc((100% / 12) * 3); }
+  .gm-4 {
+    width: calc((100% / 12) * 4); }
+  .gm-5 {
+    width: calc((100% / 12) * 5); }
+  .gm-6 {
+    width: calc((100% / 12) * 6); }
+  .gm-7 {
+    width: calc((100% / 12) * 7); }
+  .gm-8 {
+    width: calc((100% / 12) * 8); }
+  .gm-9 {
+    width: calc((100% / 12) * 9); }
+  .gm-10 {
+    width: calc((100% / 12) * 10); }
+  .gm-11 {
+    width: calc((100% / 12) * 11); }
+  .gm-12 {
+    width: calc((100% / 12) * 12); } }
+
+@media only screen and (min-width: 1200px) {
+  .gl-1 {
+    width: calc((100% / 12) * 1); }
+  .gl-2 {
+    width: calc((100% / 12) * 2); }
+  .gl-3 {
+    width: calc((100% / 12) * 3); }
+  .gl-4 {
+    width: calc((100% / 12) * 4); }
+  .gl-5 {
+    width: calc((100% / 12) * 5); }
+  .gl-6 {
+    width: calc((100% / 12) * 6); }
+  .gl-7 {
+    width: calc((100% / 12) * 7); }
+  .gl-8 {
+    width: calc((100% / 12) * 8); }
+  .gl-9 {
+    width: calc((100% / 12) * 9); }
+  .gl-10 {
+    width: calc((100% / 12) * 10); }
+  .gl-11 {
+    width: calc((100% / 12) * 11); }
+  .gl-12 {
+    width: calc((100% / 12) * 12); } }
+
+@media only screen and (min-width: 1600px) {
+  .gxl-1 {
+    width: calc((100% / 12) * 1); }
+  .gxl-2 {
+    width: calc((100% / 12) * 2); }
+  .gxl-3 {
+    width: calc((100% / 12) * 3); }
+  .gxl-4 {
+    width: calc((100% / 12) * 4); }
+  .gxl-5 {
+    width: calc((100% / 12) * 5); }
+  .gxl-6 {
+    width: calc((100% / 12) * 6); }
+  .gxl-7 {
+    width: calc((100% / 12) * 7); }
+  .gxl-8 {
+    width: calc((100% / 12) * 8); }
+  .gxl-9 {
+    width: calc((100% / 12) * 9); }
+  .gxl-10 {
+    width: calc((100% / 12) * 10); }
+  .gxl-11 {
+    width: calc((100% / 12) * 11); }
+  .gxl-12 {
+    width: calc((100% / 12) * 12); } }
+
+@media only screen and (max-width: 599px) {
+  .gm-1 {
+    width: calc((100% / 12) * 1); }
+  .gm-2 {
+    width: calc((100% / 12) * 2); }
+  .gm-3 {
+    width: calc((100% / 12) * 3); }
+  .gm-4 {
+    width: calc((100% / 12) * 4); }
+  .gm-5 {
+    width: calc((100% / 12) * 5); }
+  .gm-6 {
+    width: calc((100% / 12) * 6); }
+  .gm-7 {
+    width: calc((100% / 12) * 7); }
+  .gm-8 {
+    width: calc((100% / 12) * 8); }
+  .gm-9 {
+    width: calc((100% / 12) * 9); }
+  .gm-10 {
+    width: calc((100% / 12) * 10); }
+  .gm-11 {
+    width: calc((100% / 12) * 11); }
+  .gm-12 {
+    width: calc((100% / 12) * 12); } }
 
 html {
   font-size: 100%; }
@@ -72,17 +298,14 @@ body {
   @media only screen and (max-width: 899px) {
     body {
       font-size: 14px;
-      font-size: 0.875em;
       font-size: 0.875rem; } }
-  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+  @media only screen and (min-width: 900px) {
     body {
       font-size: 15px;
-      font-size: 0.9375em;
       font-size: 0.9375rem; } }
   @media only screen and (min-width: 1200px) {
     body {
       font-size: 16px;
-      font-size: 1em;
       font-size: 1rem; } }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,19 +328,16 @@ h6 {
 @media only screen and (max-width: 899px) {
   h1 {
     font-size: 44px;
-    font-size: 2.75em;
     font-size: 2.75rem; } }
 
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
+@media only screen and (min-width: 900px) {
   h1 {
     font-size: 50px;
-    font-size: 3.125em;
     font-size: 3.125rem; } }
 
 @media only screen and (min-width: 1200px) {
   h1 {
     font-size: 56px;
-    font-size: 3.5em;
     font-size: 3.5rem; } }
 
 h1#page-title {
@@ -131,11 +351,11 @@ h1#page-title {
       h1#page-title.adjust {
         margin: 5px;
         padding: 0 5px; } }
-    @media only screen and (min-width: 600px) and (max-width: 899px) {
+    @media only screen and (min-width: 600px) {
       h1#page-title.adjust {
         width: 740px;
         margin: 50px auto 0 auto; } }
-    @media only screen and (min-width: 900px) and (max-width: 1199px) {
+    @media only screen and (min-width: 900px) {
       h1#page-title.adjust {
         width: 960px;
         margin: 50px auto 0 auto; } }
@@ -152,17 +372,14 @@ h2 {
   @media only screen and (max-width: 899px) {
     h2 {
       font-size: 36px;
-      font-size: 2.25em;
       font-size: 2.25rem; } }
-  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+  @media only screen and (min-width: 900px) {
     h2 {
       font-size: 42px;
-      font-size: 2.625em;
       font-size: 2.625rem; } }
   @media only screen and (min-width: 1200px) {
     h2 {
       font-size: 46px;
-      font-size: 2.875em;
       font-size: 2.875rem; } }
 
 h3 {
@@ -171,17 +388,14 @@ h3 {
   @media only screen and (max-width: 899px) {
     h3 {
       font-size: 26px;
-      font-size: 1.625em;
       font-size: 1.625rem; } }
-  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+  @media only screen and (min-width: 900px) {
     h3 {
       font-size: 32px;
-      font-size: 2em;
       font-size: 2rem; } }
   @media only screen and (min-width: 1200px) {
     h3 {
       font-size: 38px;
-      font-size: 2.375em;
       font-size: 2.375rem; } }
   h3.solo {
     margin-bottom: .15em; }
@@ -191,37 +405,31 @@ h3 {
 @media only screen and (max-width: 899px) {
   h4 {
     font-size: 18px;
-    font-size: 1.125em;
     font-size: 1.125rem; } }
 
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
+@media only screen and (min-width: 900px) {
   h4 {
     font-size: 20px;
-    font-size: 1.25em;
     font-size: 1.25rem; } }
 
 @media only screen and (min-width: 1200px) {
   h4 {
     font-size: 24px;
-    font-size: 1.5em;
     font-size: 1.5rem; } }
 
 @media only screen and (max-width: 899px) {
   h5 {
     font-size: 15px;
-    font-size: 0.9375em;
     font-size: 0.9375rem; } }
 
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
+@media only screen and (min-width: 900px) {
   h5 {
     font-size: 16px;
-    font-size: 1em;
     font-size: 1rem; } }
 
 @media only screen and (min-width: 1200px) {
   h5 {
     font-size: 22px;
-    font-size: 1.375em;
     font-size: 1.375rem; } }
 
 h6 {
@@ -229,17 +437,14 @@ h6 {
   @media only screen and (max-width: 899px) {
     h6 {
       font-size: 13px;
-      font-size: 0.8125em;
       font-size: 0.8125rem; } }
-  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+  @media only screen and (min-width: 900px) {
     h6 {
       font-size: 15px;
-      font-size: 0.9375em;
       font-size: 0.9375rem; } }
   @media only screen and (min-width: 1200px) {
     h6 {
       font-size: 17px;
-      font-size: 1.0625em;
       font-size: 1.0625rem; } }
 
 a, a:link, a:active, a:visited {
@@ -269,17 +474,14 @@ p, li, blockquote {
   @media only screen and (max-width: 899px) {
     p, li, blockquote {
       font-size: 14px;
-      font-size: 0.875em;
       font-size: 0.875rem; } }
-  @media only screen and (min-width: 900px) and (max-width: 1199px) {
+  @media only screen and (min-width: 900px) {
     p, li, blockquote {
       font-size: 15px;
-      font-size: 0.9375em;
       font-size: 0.9375rem; } }
   @media only screen and (min-width: 1200px) {
     p, li, blockquote {
       font-size: 16px;
-      font-size: 1em;
       font-size: 1rem; } }
   p a, li a, blockquote a {
     color: #00853e;
@@ -306,7 +508,6 @@ ul, ol {
 
 .notes {
   font-size: 12px;
-  font-size: 0.75em;
   font-size: 0.75rem;
   color: #666;
   font-style: italic;
@@ -314,7 +515,6 @@ ul, ol {
   @media only screen and (max-width: 599px) {
     .notes {
       font-size: 9px;
-      font-size: 0.5625em;
       font-size: 0.5625rem; } }
 
 .title {
