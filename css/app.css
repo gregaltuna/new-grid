@@ -437,18 +437,18 @@ h5, h6 {
 
 @media only screen and (max-width: 899px) {
   h4 {
-    font-size: 20px;
-    font-size: 1.25rem; } }
+    font-size: 22px;
+    font-size: 1.375rem; } }
 
 @media only screen and (min-width: 900px) {
   h4 {
-    font-size: 24px;
-    font-size: 1.5rem; } }
+    font-size: 26px;
+    font-size: 1.625rem; } }
 
 @media only screen and (min-width: 1200px) {
   h4 {
-    font-size: 28px;
-    font-size: 1.75rem; } }
+    font-size: 30px;
+    font-size: 1.875rem; } }
 
 @media only screen and (max-width: 899px) {
   h5 {
@@ -475,8 +475,8 @@ h6 {
 
 @media only screen and (min-width: 600px) {
   p, li, blockquote, h6 {
-    font-size: 15px;
-    font-size: 0.9375rem; } }
+    font-size: 16px;
+    font-size: 1rem; } }
 
 @media only screen and (min-width: 900px) {
   p, li, blockquote, h6 {
@@ -493,11 +493,6 @@ h6 {
     font-size: 18px;
     font-size: 1.125rem; } }
 
-@media only screen and (min-width: 1800px) {
-  p, li, blockquote, h6 {
-    font-size: 18px;
-    font-size: 1.125rem; } }
-
 p a, li a, blockquote a, h6 a {
   font-weight: 600; }
 
@@ -508,7 +503,7 @@ strong {
   color: #500; }
 
 a, a:link, a:active, a:visited {
-  color: #500; }
+  color: #880000; }
   a:hover, a:link:hover, a:active:hover, a:visited:hover {
     color: #181818; }
 

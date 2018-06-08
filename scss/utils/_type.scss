@@ -92,15 +92,15 @@ h3 {
 
 h4 {
 	@include small-down {
-		@include font-size(20px);
+		@include font-size(22px);
 	}
 
 	@include medium {
-		@include font-size(24px);
+		@include font-size(26px);
 	}
 
 	@include large {
-		@include font-size(28px);
+		@include font-size(30px);
 	}
 }
 
@@ -128,7 +128,7 @@ p, li, blockquote, h6 {
 	}
 
 	@include small {
-		@include font-size(15px);
+		@include font-size(16px);
 	}
 
 	@include medium {
@@ -143,9 +143,9 @@ p, li, blockquote, h6 {
 		@include font-size(18px);
 	}
 
-	@include xxlarge {
-		@include font-size(18px);
-	}
+	// @include xxlarge {
+	// 	@include font-size(18px);
+	// }
 
 	a {
 		font-weight: 600;
@@ -171,7 +171,7 @@ ul, ol {
 }
 
 #{$a-tags} {
-	color: $color-p;
+	color: lighten($color-p, 10%);
 
 	&:hover {
 		color: $blacker;
